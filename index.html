@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lam Nguyen - Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+</header>
+
+
+<section class="hero-center">
+  <img src="images/ava.jpg" class="avatar">
+  <h1 class="main-title">LAM NGUYEN</h1>
+  <h2 class="tagline">PHOTOGRAPHER | VIDEOGRAPHER</h2>
+  <p class="about-text">
+  My name is Lam Nguyen. I am from Vietnam and currently studying in Toronto, Canada. I am also working as a freelance photographer.
+
+  I enjoy taking photos that capture real moments, emotions, and movement. I like to capture moments that people might not notice at first but still tell a story.
+
+  Living in Toronto has helped me learn new things and improve my photography skills. I try to combine what I learn with my own style to create images that feel natural and meaningful.
+
+  I am always open to new opportunities and collaborations. Through my work, I hope to share my perspective and continue growing as a photographer.
+</p>
+</section>
+
+<main class="gallery">
+
+  <img src="images/bluejays2.JPG">
+  <img src="images/bluejays4.JPG">
+  <img src="images/bluejays.JPG">
+    <img src="images/_DSC6895.JPG">
+  <img src="images/DSC02151.JPG">
+  <img src="images/landscape2.jpg">
+  <img src="images/humber2.JPG">
+  <img src="images/landscape.jpg">
+  <img src="images/humber1.jpg">
+  <img src="images/DSC01994 2.jpg">
+  <img src="images/bluejays5.JPG">
+  <img src="images/DSC02326.JPG">
+  <img src="images/_DSC7095.JPG" class="large">
+
+</main>
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<footer>
+  <p>© 2026 Lam Nguyen</p>
+</footer>
+
+<script>
+  const images = document.querySelectorAll(".gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
